@@ -1,0 +1,160 @@
+/*  Weather App CSS */
+
+
+QWidget {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 #1e293b, stop:1 #0f172a);
+    color: #f8fafc;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+QLabel#hdl1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-top: 10px;
+    background: transparent;
+}
+
+QLabel#CityName {
+    font-size: 16px;
+    font-weight: 400;
+    color: #94a3b8;
+    background: transparent;
+    margin-bottom: 2px;
+}
+
+QLineEdit#cityInput {
+    background-color: #334155;
+    color: #f1f5f9;
+    font-size: 22px;
+    font-weight: 500;
+    border: 2px solid #475569;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+QLineEdit#cityInput:focus {
+    border: 2px solid #38bdf8;
+}
+
+cityInput.setPlaceholderText {
+    font-size: 22px;
+}
+
+QPushButton#searchBt {
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+QPushButton#searchBt:hover {
+    background-color: #7dd3fc;
+    cursor: pointer;
+
+}
+
+QWidget#weather_container1 {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    min-height: 190px;
+    max-height: 280px;
+}
+
+QLabel#displayImg {
+    font-size: 70px;
+    background: transparent;
+}
+
+QLabel#tempInfo {
+    font-size: 64px;
+    font-weight: 800;
+    color: #ffffff;
+    background: transparent;
+}
+
+QLabel#descrip {
+    font-size: 20px;
+    font-weight: 500;
+    color: #cbd5e1;
+    text-transform: capitalize;
+    background: transparent;
+}
+
+QWidget#humidity_container, QWidget#wind_container {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    min-height: 190px;
+    max-height: 280px;
+}
+
+QWidget#humidity_container QLabel, QWidget#wind_container QLabel {
+    background: transparent;
+    border: none;
+}
+
+QLabel#humidity_title, QLabel#wind_title {
+    font-size: 16px;
+    color: #7dd3fc;
+    font-weight: 600;
+    margin-top: 8px;
+    background-color: transparent;
+}
+
+QLabel#humidity_info, QLabel#wind_info {
+    font-size: 30px;
+    font-weight: 800;
+    color: #ffffff;
+    background-color: transparent;
+
+}
+
+QLabel#humidity_img, QLabel#wind_img {
+    font-size: 30px;
+    margin-bottom: 8px;
+    background-color: transparent;
+
+}
+
+QLabel#errorInfo {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fb7185;
+    background: transparent;
+    margin: 5px;
+}
+
+QScrollArea {
+    background: transparent;
+    border: none;
+}
+
+QScrollArea QScrollBar:vertical {
+    background: transparent;
+    width: 7px;
+    margin: 0px;
+}
+
+QScrollArea QScrollBar::handle:vertical {
+    background: rgba(56, 189, 248, 0.5);
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollArea QScrollBar::handle:vertical:hover {
+    background: rgba(56, 189, 248, 0.8);
+}
+
+QScrollArea QScrollBar::add-line:vertical,
+QScrollArea QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollArea QScrollBar::add-page:vertical,
+QScrollArea QScrollBar::sub-page:vertical {
+    background: transparent;
+}
