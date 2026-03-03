@@ -13,9 +13,9 @@ A modern desktop weather application built with PyQt5 that provides real-time we
 ## Screenshots
 ![Weather App Screenshot]
 
-(WeatherApp/screenshot1.png)
-(WeatherApp/screenshot2.png)
-(WeatherApp/screenshot3.png)
+(assets/screenshot1.png)
+(assets/screenshot2.png)
+(assets/screenshot3.png)
 
 
 ## Installation
@@ -89,4 +89,5 @@ This project is open source and available under the MIT License.
 
 ## Acknowledgments
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
+
 - Icons: Emoji weather symbols
