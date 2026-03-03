@@ -13,9 +13,10 @@ A modern desktop weather application built with PyQt5 that provides real-time we
 ## Screenshots
 ![Weather App Screenshot]
 
-(assets/screenshot1.png)
-(assets/screenshot2.png)
-(assets/screenshot3.png)
+## Screenshots
+![Main View](assets/screenshot1.png)
+![Weather Result](assets/screenshot2.png)
+![Error Handling](assets/screenshot3.png)
 
 
 ## Installation
@@ -28,7 +29,7 @@ A modern desktop weather application built with PyQt5 that provides real-time we
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ali-faraz-py/weather-app.git
+git clone https://github.com/ali-faraz-py/python-weather-app.git
 cd weather-app
 ```
 
@@ -83,11 +84,10 @@ Pull requests are welcome! For major changes, please open an issue first.
 This project is open source and available under the MIT License.
 
 ## Author
-**Your Name**
+**Syed Ali Faraz**
 - GitHub: [@ali-faraz-py](https://github.com/ali-faraz-py)
 - Email: syedalifaraz52@gmail.com
 
 ## Acknowledgments
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
-
 - Icons: Emoji weather symbols
