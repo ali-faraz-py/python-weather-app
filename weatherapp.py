@@ -38,6 +38,7 @@ class main_window(QWidget):
 
     def initUI(self):
         self.setWindowTitle("Weather App")
+        self.setFixedSize(380, 500)
 
         content_widget = QWidget()
         
@@ -54,7 +55,6 @@ class main_window(QWidget):
         container1_layout.addWidget(self.descrip)
 
         self.weather_container1.setLayout(container1_layout)
-        self.weather_container1.hide()
 
         vbox.addWidget(self.weather_container1)
 
@@ -69,7 +69,6 @@ class main_window(QWidget):
         humidity_container1.addWidget(self.humidity_img)
 
         self.humidity_container.setLayout(humidity_container1)
-        self.humidity_container.hide()
 
         wind_container1 = QVBoxLayout(self.wind_container)
         wind_container1.addWidget(self.wind_title)
@@ -77,7 +76,6 @@ class main_window(QWidget):
         wind_container1.addWidget(self.wind_img)
 
         self.wind_container.setLayout(wind_container1)
-        self.wind_container.hide()
 
         content_widget.setLayout(vbox)
 
@@ -126,6 +124,7 @@ class main_window(QWidget):
         self.wind_img.setAlignment(Qt.AlignCenter)
 
         self.loadStylecss()
+        self.show_placeholder_content()
 
         self.searchBt.clicked.connect(self.getWeather)
         self.cityInput.returnPressed.connect(self.getWeather)
@@ -136,6 +135,13 @@ class main_window(QWidget):
                 self.setStyleSheet(C.read())
         except FileNotFoundError:
             print("weatherapp.css not found!")
+
+    def show_placeholder_content(self):
+        self.tempInfo.setText("--°C")
+        self.displayImg.setText("🌤️")
+        self.descrip.setText("Search for a city")
+        self.humidity_info.setText("--%")
+        self.wind_info.setText("--m/s")
 
     def getWeather(self):
         api_key = "17a05a8da7586ded8fe284864ae71209"
@@ -186,14 +192,8 @@ class main_window(QWidget):
 
     def DisplayError(self, message):
         self.errorInfo.setText(message)
-        self.displayImg.clear()
-        self.descrip.clear()
-        self.tempInfo.clear()
-        self.weather_container1.hide()
-        self.humidity_container.hide()
-        self.wind_container.hide()
-
-
+        self.show_placeholder_content()
+        
     def DisplayWeather(self, data):
         temperature_k = data['main']['temp']
         temperature_c = temperature_k - 273.15
@@ -206,9 +206,6 @@ class main_window(QWidget):
         self.descrip.setText(f"{temperature_descrip}")
         self.errorInfo.clear()
 
-        self.weather_container1.show()
-        self.humidity_container.show()
-        self.wind_container.show()
         self.display_humidity(data)
         self.display_wind(data)
 
