@@ -12,7 +12,9 @@ A sleek, modern desktop weather application built with **Python** and **PyQt5**.
 
 ## 📸 Screenshots
 ![Main View](assets/screenshot1.png)
+![Main View](assets/screenshot1a.png.png)
 ![Weather Result](assets/screenshot2.png)
+![Weather Result](assets/screenshot2a.png)
 ![Error Handling](assets/screenshot3.png)
 
 ## 🚀 Installation
@@ -21,3 +23,15 @@ A sleek, modern desktop weather application built with **Python** and **PyQt5**.
 ```bash
 git clone [https://github.com/ali-faraz-py/python-weather-app.git](https://github.com/ali-faraz-py/python-weather-app.git)
 cd python-weather-app
+
+
+## 📂 Project Structure
+
+'''
+python-weather-app/
+├── weatherapp.py       # Main Python logic & PyQt5 Layout
+├── weatherapp.css      # Custom styling & animations
+├── requirements.txt    # List of necessary Python libraries
+├── README.md           # Project documentation
+└── assets/             # Folder containing screenshots
+'''
