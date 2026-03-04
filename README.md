@@ -1,6 +1,6 @@
 # 🌦️ Modern Weather App
 
-![Weather App Demo](assets\WeatherApp.gif)
+![Weather App Demo](assets/WeatherApp.gif)
 
 A sleek, modern desktop weather application built with **Python** and **PyQt5**. This app provides real-time weather data, including temperature, humidity, and wind speed, using a beautiful dark-mode interface with smooth gradients and glassmorphism effects.
 
