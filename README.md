@@ -12,7 +12,7 @@ A sleek, modern desktop weather application built with **Python** and **PyQt5**.
 
 ## 📸 Screenshots
 ![Main View](assets/screenshot1.png)
-![Main View](assets/screenshot1a.png.png)
+![Main View](assets/screenshot1a.png)
 ![Weather Result](assets/screenshot2.png)
 ![Weather Result](assets/screenshot2a.png)
 ![Error Handling](assets/screenshot3.png)
