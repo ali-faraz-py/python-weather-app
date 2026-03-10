@@ -1,6 +1,7 @@
 # Weather App project
 
 import sys
+import numpy as np
 import requests
 from PyQt5.QtWidgets import (QMainWindow, QWidget, QApplication, QPushButton, QLabel, QLineEdit, 
                              QVBoxLayout, QHBoxLayout, QScrollArea)
@@ -38,10 +39,10 @@ class main_window(QWidget):
 
     def initUI(self):
         self.setWindowTitle("Weather App")
-        self.setFixedSize(380, 500)
+        self.resize(380, 500)
 
         content_widget = QWidget()
-        
+
         vbox = QVBoxLayout()
         vbox.addWidget(self.hdl1)
         vbox.addWidget(self.CityName)
@@ -55,7 +56,6 @@ class main_window(QWidget):
         container1_layout.addWidget(self.descrip)
 
         self.weather_container1.setLayout(container1_layout)
-
         vbox.addWidget(self.weather_container1)
 
         hbox_info = QHBoxLayout()
@@ -131,12 +131,13 @@ class main_window(QWidget):
 
     def loadStylecss(self):
         try:
-            with open("weatherapp.css", "r") as C:
+            with open("WeatherApp/weatherapp.css", "r") as C:
                 self.setStyleSheet(C.read())
         except FileNotFoundError:
             print("weatherapp.css not found!")
 
     def show_placeholder_content(self):
+        self.displayImg.setText("🌤️")
         self.tempInfo.setText("--°C")
         self.displayImg.setText("🌤️")
         self.descrip.setText("Search for a city")
@@ -193,6 +194,7 @@ class main_window(QWidget):
     def DisplayError(self, message):
         self.errorInfo.setText(message)
         self.show_placeholder_content()
+
         
     def DisplayWeather(self, data):
         temperature_k = data['main']['temp']
